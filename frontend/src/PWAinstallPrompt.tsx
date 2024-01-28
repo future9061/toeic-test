@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { PWAInstallPromptCSS } from './style/PWAinstallPromptCSS';
 
 function PWAinstallPrompt() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -37,11 +38,11 @@ function PWAinstallPrompt() {
   };
 
   return (
-    <>
+    <PWAInstallPromptCSS>
       {defferedPrompt && (
         <button onClick={handleInstallClick}>앱 다운 받기 ↓</button>
       )}
-    </>
+    </PWAInstallPromptCSS>
   );
 }
 

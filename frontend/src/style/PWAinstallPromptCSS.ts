@@ -1,3 +1,5 @@
 import styled from 'styled-components';
 
-const PWAInstallPromptCSS = styled.div``;
+export const PWAInstallPromptCSS = styled.div`
+  border: 1px solid red;
+`;
