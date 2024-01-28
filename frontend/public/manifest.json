@@ -1,6 +1,6 @@
 {
-  "short_name": "샘플",
-  "name": "샘플",
+  "short_name": "only english",
+  "name": "pwa dskfjsdldk",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +18,18 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "description": "앱에 대한 간단한 설명 적기",
+  "screenshots": [
+    {
+      "src": "img/image1.png",
+      "sizes": "640x320",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Wonder Widgets"
+    }
+  ]
 }
