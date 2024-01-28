@@ -80,7 +80,7 @@ function PWAinstallPrompt() {
   return (
     <>
       {defferedPrompt && !isIOS && contentAndroid}
-      {defferedPrompt && isIOS && contentIOS}
+      {isIOS && contentIOS}
     </>
   );
 }
