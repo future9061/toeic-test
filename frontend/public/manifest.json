@@ -1,19 +1,29 @@
 {
-  "short_name": "only english",
-  "name": "pwa dskfjsdldk",
+  "short_name": "pwa 테스트 ",
+  "name": "토익 기출문제",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "icons/logo16.png",
+      "type": "image/png",
+      "sizes": "16x16"
     },
     {
-      "src": "logo192.png",
+      "src": "icons/logo24.png",
+      "type": "image/png",
+      "sizes": "24x24"
+    },
+    {
+      "src": "icons/logo32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "icons/logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "icons/logo512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -22,6 +32,15 @@
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff",
+  "shortcuts": [
+    {
+      "name": "언제 뜨는거지?",
+      "short_name": "언제?",
+      "description": "설명란입니다",
+      "url": "/.",
+      "icons": [{ "src": "/img/logo192.png", "sizes": "192x192" }]
+    }
+  ],
   "description": "앱에 대한 간단한 설명 적기",
   "screenshots": [
     {
