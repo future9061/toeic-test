@@ -4,7 +4,6 @@ import Button from '../components/common/Button';
 import { FaGithub } from 'react-icons/fa';
 import Logo from '../components/common/Logo';
 import { motion, useTime, useTransform } from 'framer-motion';
-import useResponsive from '../Responsive';
 
 function Home() {
   const time = useTime();
@@ -25,13 +24,12 @@ function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  const homeContent = (
-    <>
+  return (
+    <HomeCSS>
       <div className="banner">
         <motion.div style={{ rotate: animatedRotate }} className="rotate_box" />
         <Logo size="25em" />
       </div>
-
       <div className="btn_wrap">
         <Button children="로그인" id="login" bgcolor="#fff" color="#7AC3CE" />
         <Button children="회원가입" bgcolor="#7AC3CE" id="register" />
@@ -50,9 +48,7 @@ function Home() {
           </span>
         </div>
       </div>
-    </>
+    </HomeCSS>
   );
-
-  return <HomeCSS>{useResponsive(homeContent)}</HomeCSS>;
 }
 export default Home;
