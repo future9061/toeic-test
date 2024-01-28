@@ -28,7 +28,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff",
@@ -37,7 +37,7 @@
       "name": "토익 기출문제 풀어보기!",
       "short_name": "TOEIC",
       "description": "다양한 토익 기출문제를 제공합니다!",
-      "url": "./index.html",
+      "url": ".",
       "icons": [{ "src": "/img/logo192.png", "sizes": "192x192" }]
     }
   ],
