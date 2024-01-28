@@ -1,6 +1,6 @@
 {
-  "short_name": "pwa 테스트 ",
-  "name": "토익 기출문제",
+  "short_name": "TOEIC",
+  "name": "토익 기출문제 풀어보기!",
   "icons": [
     {
       "src": "icons/logo16.png",
@@ -34,10 +34,10 @@
   "background_color": "#ffffff",
   "shortcuts": [
     {
-      "name": "언제 뜨는거지?",
-      "short_name": "언제?",
-      "description": "설명란입니다",
-      "url": "/",
+      "name": "토익 기출문제 풀어보기!",
+      "short_name": "TOEIC",
+      "description": "다양한 토익 기출문제를 제공합니다!",
+      "url": "./index.html",
       "icons": [{ "src": "/img/logo192.png", "sizes": "192x192" }]
     }
   ],
