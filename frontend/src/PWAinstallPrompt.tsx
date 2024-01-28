@@ -37,9 +37,9 @@ function PWAinstallPrompt() {
 
       defferedPrompt.userChoice.then((choiceResult: { outcome: string }) => {
         if (choiceResult.outcome === 'accepted') {
-          alert('앱 설치가 완료되었습니다.');
+          console.log('앱 설치 승인');
         } else {
-          alert('앱 설치를 거절하였습니다.');
+          console.log('앱 설치 거절');
         }
 
         setDefferedPrompt(null);
@@ -79,8 +79,8 @@ function PWAinstallPrompt() {
 
   return (
     <>
-      {defferedPrompt && contentAndroid}
-      {isIOS && contentIOS}
+      {defferedPrompt && !isIOS && contentAndroid}
+      {defferedPrompt && isIOS && contentIOS}
     </>
   );
 }
