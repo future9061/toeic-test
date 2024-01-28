@@ -47,16 +47,28 @@ function PWAinstallPrompt() {
     }
   };
 
-  const content = (
+  const contentAndroid = (
     <PWAInstallPromptCSS>
       <Mascort />
       <p>
         <span>TOEIC</span>은 앱에서 원할하게 사용할 수 있어요.
       </p>
       <strong>앱을 설치하시겠습니까?</strong>
-      <div>
+      <div className="btn-wrap">
         <button onClick={handleInstallClick}>앱 다운 받기 ↓</button>
         <button onClick={() => setDefferedPrompt(null)}>괜찮아요 :)</button>
+      </div>
+    </PWAInstallPromptCSS>
+  );
+
+  const contentIOS = (
+    <PWAInstallPromptCSS>
+      <Mascort />
+      <p>
+        <span>TOEIC</span>은 앱에서 원할하게 사용할 수 있어요.
+      </p>
+      <div>
+        <img src={`${process.env.PUBLIC_URL}/img/pwa-ios2`} alt="ios 앱 설치" />
       </div>
     </PWAInstallPromptCSS>
   );
@@ -65,7 +77,12 @@ function PWAinstallPrompt() {
     return null;
   }
 
-  return <>{defferedPrompt && content}</>;
+  return (
+    <>
+      {defferedPrompt && contentAndroid}
+      {isIOS && contentIOS}
+    </>
+  );
 }
 
 export default PWAinstallPrompt;
