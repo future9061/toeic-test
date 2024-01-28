@@ -4,6 +4,7 @@ import Button from '../components/common/Button';
 import { FaGithub } from 'react-icons/fa';
 import Logo from '../components/common/Logo';
 import { motion, useTime, useTransform } from 'framer-motion';
+import PWAinstallPrompt from '../PWAinstallPrompt';
 
 function Home() {
   const time = useTime();
@@ -34,8 +35,9 @@ function Home() {
         <Button children="로그인" id="login" bgcolor="#fff" color="#7AC3CE" />
         <Button children="회원가입" bgcolor="#7AC3CE" id="register" />
         <div className="line"></div>
-        <Button children="앱 다운받기 ↓" bgcolor="#2E66DD" />
+        <PWAinstallPrompt />
       </div>
+
       <div
         className="footer"
         onClick={() => {
