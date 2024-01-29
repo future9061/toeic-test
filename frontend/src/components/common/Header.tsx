@@ -6,7 +6,7 @@ import { HeaderCSS } from '../../style/components/common/HeaderCSS';
 function Header() {
   return (
     <HeaderCSS>
-      <Logo />
+      <Logo className="small" />
       <Mascort />
     </HeaderCSS>
   );

@@ -1,8 +1,8 @@
 import React from 'react';
-import { LoginFormCSS } from '../style/components/LoginForm';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { FormData } from '../types/FormData';
 import SubmitBtn from './common/SubmitBtn';
+import { LoginFormCSS } from '../style/components/login/LoginFormCSS';
 
 function LoginForm() {
   const {
