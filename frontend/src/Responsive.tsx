@@ -1,22 +1,29 @@
-import { ReactNode } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-interface MediaQueryConfig {
-  label: string;
-  query: { maxWidth?: number; minWidth?: number };
+interface ResponsiveProps {
+  children: JSX.Element;
 }
 
-const mediaQueries: MediaQueryConfig[] = [
-  { label: 'smallMobile', query: { maxWidth: 360 } },
-  { label: 'largeMobile', query: { minWidth: 361, maxWidth: 768 } },
-  { label: 'tablet', query: { minWidth: 769, maxWidth: 1024 } },
-  { label: 'desktop', query: { minWidth: 1025 } },
-];
-
-const useResponsive = (children: ReactNode) => {
-  return mediaQueries.map(({ query }) =>
-    useMediaQuery(query) ? children : null,
-  );
+export const SmallMobile = ({
+  children,
+}: ResponsiveProps): JSX.Element | null => {
+  const isSmallMobile = useMediaQuery({ maxWidth: 360 });
+  return isSmallMobile ? children : null;
 };
 
-export default useResponsive;
+export const LargeMobile = ({
+  children,
+}: ResponsiveProps): JSX.Element | null => {
+  const isLargeMobile = useMediaQuery({ minWidth: 361, maxWidth: 768 });
+  return isLargeMobile ? children : null;
+};
+
+export const Tablet = ({ children }: ResponsiveProps): JSX.Element | null => {
+  const isTablet = useMediaQuery({ minWidth: 769, maxWidth: 1024 });
+  return isTablet ? children : null;
+};
+
+export const DeskTop = ({ children }: ResponsiveProps): JSX.Element | null => {
+  const isDeskTop = useMediaQuery({ minWidth: 1025 });
+  return isDeskTop ? children : null;
+};

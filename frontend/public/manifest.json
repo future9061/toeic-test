@@ -1,6 +1,6 @@
 {
   "short_name": "TOEIC",
-  "name": "토익 기출문제 풀어보기!",
+  "name": "TOEIC",
   "icons": [
     {
       "src": "icons/logo16.png",
@@ -34,17 +34,17 @@
   "background_color": "#ffffff",
   "shortcuts": [
     {
-      "name": "토익 기출문제 풀어보기!",
+      "name": "TOEIC",
       "short_name": "TOEIC",
       "description": "다양한 토익 기출문제를 제공합니다!",
       "url": ".",
       "icons": [{ "src": "/img/logo192.png", "sizes": "192x192" }]
     }
   ],
-  "description": "앱에 대한 간단한 설명 적기",
+  "description": "TOEIC",
   "screenshots": [
     {
-      "src": "img/image1.png",
+      "src": "img/snapshot.png",
       "sizes": "640x320",
       "type": "image/png",
       "form_factor": "wide",
