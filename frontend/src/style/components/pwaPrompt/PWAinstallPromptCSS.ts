@@ -49,7 +49,7 @@ export const PWAInstallPromptCSS = styled.div`
           padding: 5px;
 
           &:first-child {
-            background: #56d2da;
+            background: #609098;
 
             &:hover {
               background: #dadada;
@@ -57,9 +57,9 @@ export const PWAInstallPromptCSS = styled.div`
           }
 
           &:last-child {
-            background: #9c9c9c;
+            background: #dadada;
             &:hover {
-              background: #dadada;
+              background: #609098;
             }
           }
         }
@@ -191,6 +191,64 @@ export const PWAInstallPromptCSS = styled.div`
         width:100%;
         height:auto;
         margin-top:5px;
+      }
+    }
+  }
+    `}
+
+    ${media.desktop`
+    
+  > .bg {
+   
+    border-radius: 10px;
+    padding: 20px 0px;
+    bottom: calc(50% - 15%);
+    left:calc(50% - 25%);
+    width: 50%;
+    min-height: 30%;
+    box-shadow: 5px 0px 20px 3px rgba(0, 0, 0, 0.3);
+ 
+
+    > section {
+      > p {   
+        font-size:20px;
+
+        span {
+     
+          font-weight: bold;
+          color: #2e66dd;      
+         
+        }
+      }
+
+      > strong {
+        font-weight: bold;
+        color: #2e66dd;
+        font-size:30px;
+      }
+
+      > .btn-wrap {
+     
+        flex-direction: row;
+        gap:20px;
+       margin-top:30px;
+      
+
+        > button {
+          font-weight: bold;
+          color: #fff;
+          padding:10px 15px;  
+          font-size:20px;
+          border-radius: 10px;
+
+
+          &:last-child {
+            background: #dadada;
+            &:hover {
+              background: #609098;
+            }
+          }
+        }
       }
     }
   }

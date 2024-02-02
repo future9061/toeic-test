@@ -116,8 +116,7 @@ function PWAinstallPrompt({ isIOSShow, setIsIOSShow }: PropsIOS) {
 
   return (
     <>
-      {(defferedPrompt && !isIOS && contentAndroid) ||
-        (isIOS && isIOSShow && contentIOS)}
+      {(defferedPrompt && contentIOS) || (isIOS && isIOSShow && contentAndroid)}
     </>
   );
 }
