@@ -15,8 +15,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "typeRoots": ["./src/types", "./node_modules/@types"],
-    "types": ["@types/jest"],
+    "typeRoots": ["./src/types", "./node_modules/@types/jest"],
   },
   "include": ["src"],
 }
