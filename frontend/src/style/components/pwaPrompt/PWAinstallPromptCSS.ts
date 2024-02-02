@@ -49,7 +49,7 @@ export const PWAInstallPromptCSS = styled.div`
           padding: 5px;
 
           &:first-child {
-            background: #609098;
+            background: #56d2da;
 
             &:hover {
               background: #dadada;
@@ -57,9 +57,9 @@ export const PWAInstallPromptCSS = styled.div`
           }
 
           &:last-child {
-            background: #dadada;
+            background: #9c9c9c;
             &:hover {
-              background: #609098;
+              background: #dadada;
             }
           }
         }

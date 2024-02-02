@@ -11,6 +11,8 @@ export const HomeCSS = styled.div`
     justify-content: center;
     align-items: center;
 
+    min-height: 40%;
+
     > .rotate_box {
       background: #fff;
       position: absolute;
@@ -23,6 +25,7 @@ export const HomeCSS = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 60%;
 
     > .line {
       height: 0px;
@@ -51,6 +54,7 @@ export const HomeCSS = styled.div`
   ${media.desktop`
  > .banner {
   padding: 50px;
+
     > .rotate_box {
       border-radius: 50px;
       filter: blur(30px);
@@ -60,7 +64,7 @@ export const HomeCSS = styled.div`
   }
     > .btn_wrap {
     gap: 15px;
-    margin: 40px 0;
+   
     > .line {
       width: 400px;
       margin: 15px 0px;
@@ -88,7 +92,7 @@ export const HomeCSS = styled.div`
 
   > .btn_wrap {
     gap: 15px;
-    margin: 40px 0;
+    
 
     > .line {
       width: 330px;
@@ -117,7 +121,7 @@ export const HomeCSS = styled.div`
 
   > .btn_wrap {
     gap: 15px;
-    margin: 40px 0;
+    
 
     > .line {
       width: 290px;
@@ -146,7 +150,7 @@ export const HomeCSS = styled.div`
   
   > .btn_wrap {
     gap: 10px;
-    margin: 40px 0;
+    
 
     > .line {
       width: 190px;

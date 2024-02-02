@@ -65,7 +65,7 @@ function PWAinstallPrompt({ isIOSShow, setIsIOSShow }: PropsIOS) {
             <button onClick={handleInstallClick}>앱 다운 받기</button>
             <button
               onClick={() => {
-                () => setDefferedPrompt(null);
+                setDefferedPrompt(null);
               }}
             >
               괜찮아요 :)
@@ -98,10 +98,11 @@ function PWAinstallPrompt({ isIOSShow, setIsIOSShow }: PropsIOS) {
           <div className="btn-wrap">
             <button
               onClick={() => {
-                setIsIOSShow?.(false);
+                setIsIOSShow?.((pre) => !pre);
+                localStorage.setItem('isIOSShow', 'false');
               }}
             >
-              확인했어요 :)
+              다신 열지 않기 X
             </button>
           </div>
         </section>
@@ -115,8 +116,9 @@ function PWAinstallPrompt({ isIOSShow, setIsIOSShow }: PropsIOS) {
 
   return (
     <>
-      {(defferedPrompt && !isIOS && contentAndroid) ||
-        (isIOS && isIOSShow && contentIOS)}
+      {/* {(defferedPrompt && !isIOS && contentAndroid) ||
+        (isIOS && isIOSShow && contentIOS)} */}
+      {isIOSShow ? contentIOS : contentAndroid}
     </>
   );
 }

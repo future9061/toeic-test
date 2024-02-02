@@ -11,7 +11,13 @@ import DesktopPrompt from '../components/pwaPrompt/DesktopPrompt';
 function Home() {
   const time = useTime();
   const [rotationCount, setRotationCount] = useState(0);
-  const [isIOSShow, setIsIOSShow] = useState(true);
+  const storage = localStorage.getItem('isIOSShow');
+  const initialIOSShow = storage && JSON.parse(storage);
+  const [isIOSShow, setIsIOSShow] = useState(initialIOSShow);
+
+  useEffect(() => {
+    !storage && localStorage.setItem('isIOSShow', 'true');
+  }, []);
 
   const animatedRotate = useTransform(
     time,
