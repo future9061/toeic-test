@@ -3,7 +3,8 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { RegisterData } from '../../types/RegisterData';
 import Agreement from './Agreement';
 import SubmitBtn from '../common/SubmitBtn';
-import axios from 'axios';
+import { FetchRegister } from '../../apis/FetchRegister';
+import { useNavigate } from 'react-router-dom';
 
 function RegisterForm() {
   const {
@@ -12,17 +13,12 @@ function RegisterForm() {
     watch,
     formState: { errors },
   } = useForm<RegisterData>();
+  const navigate = useNavigate();
 
   const onsubmit: SubmitHandler<RegisterData> = (Register) => {
-    const data = { email: Register.email, password: Register.password };
-    const headers = {
-      'Content-Type': 'application/json; charset=utf-8',
-    };
+    FetchRegister(Register);
 
-    axios
-      .post('https://api.doit-toeic.xyz/auth/register', data, { headers })
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+    navigate('/login');
   };
 
   const passwordRef = watch('password');
