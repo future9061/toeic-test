@@ -3,14 +3,14 @@ import { SubmitBtnProps } from '../../../types/SubmitBtnProps';
 import { media } from '../../mediaQuery';
 
 export const SubmitBtnCSS = styled.button<SubmitBtnProps>`
-  background: ${(props) => props.bgColor || '#fff'};
+  background: ${(props) => props.bgcolor || '#fff'};
   color: ${(props) => props.color || '#7AC3CE'};
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35);
   margin-top: 10px;
 
   &:hover {
     background-color: ${(props) => props.color || '#7AC3CE'};
-    color: ${(props) => props.bgColor || '#fff'};
+    color: ${(props) => props.bgcolor || '#fff'};
   }
 
   ${media.smallMobile`

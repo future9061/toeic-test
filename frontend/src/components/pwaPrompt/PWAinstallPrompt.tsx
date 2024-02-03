@@ -98,11 +98,10 @@ function PWAinstallPrompt({ isIOSShow, setIsIOSShow }: PropsIOS) {
           <div className="btn-wrap">
             <button
               onClick={() => {
-                setIsIOSShow?.((pre) => !pre);
-                localStorage.setItem('isIOSShow', 'false');
+                setIsIOSShow?.(false);
               }}
             >
-              다신 열지 않기 X
+              확인했어요 :)
             </button>
           </div>
         </section>
@@ -116,7 +115,8 @@ function PWAinstallPrompt({ isIOSShow, setIsIOSShow }: PropsIOS) {
 
   return (
     <>
-      {(defferedPrompt && contentIOS) || (isIOS && isIOSShow && contentAndroid)}
+      {(defferedPrompt && !isIOS && contentAndroid) ||
+        (isIOS && isIOSShow && contentIOS)}
     </>
   );
 }

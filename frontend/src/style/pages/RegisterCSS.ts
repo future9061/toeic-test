@@ -6,5 +6,4 @@ export const RegisterCSS = styled.div`
   text-align: center;
   background-image: url('./img/bg-img.webp');
   position: relative;
-  padding: 0px 0px 30px 0px;
 `;

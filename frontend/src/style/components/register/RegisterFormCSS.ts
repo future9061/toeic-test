@@ -6,6 +6,7 @@ export const RegisterFormCSS = styled.form`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  min-height: 80vh;
 
   > span {
     color: #a10909;

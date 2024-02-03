@@ -199,13 +199,12 @@ export const PWAInstallPromptCSS = styled.div`
     ${media.desktop`
     
   > .bg {
-   
     border-radius: 10px;
     padding: 20px 0px;
-    bottom: calc(50% - 15%);
+    bottom: calc(50% - 30%);
     left:calc(50% - 25%);
     width: 50%;
-    min-height: 30%;
+    min-height: 50%;
     box-shadow: 5px 0px 20px 3px rgba(0, 0, 0, 0.3);
  
 
@@ -228,10 +227,9 @@ export const PWAInstallPromptCSS = styled.div`
       }
 
       > .btn-wrap {
-     
         flex-direction: row;
         gap:20px;
-       margin-top:30px;
+       margin-top:20px;
       
 
         > button {
@@ -249,6 +247,18 @@ export const PWAInstallPromptCSS = styled.div`
             }
           }
         }
+      }
+    }
+
+    >.img-wrap{
+      width:300px;
+
+
+      >img{
+        object-fit:cover;
+        width:100%;
+        height:auto;
+        margin-top:5px;
       }
     }
   }
