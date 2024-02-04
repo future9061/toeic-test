@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ButtonProps } from '../../../types/ButtonPtops';
+import { ButtonProps } from '../../../types/ButtonProps';
 import { media } from '../../mediaQuery';
 
 export const ButtonCSS = styled.button<ButtonProps>`

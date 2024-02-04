@@ -1,37 +1,39 @@
 import React from 'react';
 import { LoginFormCSS } from '../../style/components/login/LoginFormCSS';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { FormData } from '../../types/LoginData';
+import { LoginData } from '../../types/LoginData';
 import SubmitBtn from '../common/SubmitBtn';
+import { FetchLogIn } from '../../apis/auth/FetchLogin';
 
 function LoginForm() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormData>();
+  } = useForm<LoginData>();
 
-  const onSubmit: SubmitHandler<FormData> = (data) => {
-    console.log(data);
+  const onsubmit: SubmitHandler<LoginData> = (data) => {
+    FetchLogIn(data);
   };
 
   return (
     <>
-      <LoginFormCSS onSubmit={handleSubmit(onSubmit)}>
+      <LoginFormCSS onSubmit={handleSubmit(onsubmit)}>
         <fieldset>
           <label>ID</label>
           <input
             id="id"
             spellCheck={false}
-            {...register('username', { required: true })}
+            {...register('email', { required: true })}
           />
         </fieldset>
-        {errors.username && <span>아이디를 작성해주세요!</span>}
+        {errors.email && <span>아이디를 작성해주세요!</span>}
 
         <fieldset>
           <label>PW</label>
           <input
             id="password"
+            type="password"
             spellCheck={false}
             {...register('password', { required: true })}
           />

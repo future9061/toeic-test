@@ -1,7 +1,7 @@
 import React from 'react';
 import { ButtonCSS } from '../../style/components/common/ButtonCSS';
 import { useNavigate } from 'react-router-dom';
-import { ButtonProps } from '../../types/ButtonPtops';
+import { ButtonProps } from '../../types/ButtonProps';
 
 function Button({
   children,
