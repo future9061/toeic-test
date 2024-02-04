@@ -9,5 +9,8 @@ export default axios.create({
 
 export const httpClientForCredentials = axios.create({
   baseURL: 'https://api.doit-toeic.xyz',
+  headers: {
+    'Content-Type': 'application/json',
+  },
   withCredentials: true,
 });
