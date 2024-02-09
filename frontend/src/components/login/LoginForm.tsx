@@ -3,17 +3,21 @@ import { LoginFormCSS } from '../../style/components/login/LoginFormCSS';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { LoginData } from '../../types/LoginData';
 import SubmitBtn from '../common/SubmitBtn';
-import { FetchLogIn } from '../../apis/auth/FetchLogin';
+import { FetchLogIn } from '../../apis/auth/Login';
+import { useNavigate } from 'react-router-dom';
 
 function LoginForm() {
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<LoginData>();
 
-  const onsubmit: SubmitHandler<LoginData> = (data) => {
-    FetchLogIn(data);
+  const onsubmit: SubmitHandler<LoginData> = async (data) => {
+    await FetchLogIn(data);
+    navigate('/main');
   };
 
   return (
