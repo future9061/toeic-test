@@ -4,6 +4,7 @@ import { media } from '../style/mediaQuery';
 import { useNavigate } from 'react-router-dom';
 import ProfileToggle from '../components/Main/ProfileToggle';
 import ClickNavigationBox from '../components/common/ClickNavigationBox';
+import { Sample } from '../apis/auth/Login';
 
 const Wrapper = styled.div`
   ${media.smallMobile`
@@ -281,6 +282,7 @@ function Main() {
         path="reportIcon"
         title="문제 제보하기"
       />
+      <button onClick={() => Sample()}>유저 정보 조회</button>
     </Wrapper>
   );
 }
