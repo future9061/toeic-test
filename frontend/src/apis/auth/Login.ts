@@ -17,7 +17,6 @@ httpClientForCredentials.interceptors.response.use(
       response: { status },
     } = error;
 
-    //토큰이 만료되었을 때
     if (status === 401) {
       if (error.response.data.message === 'Unauthorized') {
         const originRequest = config;
@@ -25,8 +24,9 @@ httpClientForCredentials.interceptors.response.use(
           const response = await FetchRefreshToken();
 
           if (response.status === 200) {
-            const { newAccessToken } = await response.data.data;
-            axios.defaults.headers.common.Authorization = `Bearer ${newAccessToken}`;
+            const newAccessToken = await response.data.data.accessToken;
+
+            httpClientForCredentials.defaults.headers.common.Authorization = `Bearer ${newAccessToken}`;
             originRequest.headers.Authorization = `Bearer ${newAccessToken}`;
 
             return axios(originRequest);
@@ -37,25 +37,7 @@ httpClientForCredentials.interceptors.response.use(
         }
       }
     }
-  },
-);
-
-httpClientForCredentials.interceptors.request.use(
-  (response) => {
-    return response;
-  },
-  async (error) => {
-    const {
-      config,
-      response: { status },
-    } = error;
-
-    if (status === 401) {
-      if (error.response.data.message === 'Unauthorized') {
-        // config.headers.Authorization = `Bearer ${accessToken}`;
-        return config; // 변경된 설정 객체를 반환합니다.
-      }
-    }
+    return Promise.reject(error);
   },
 );
 
